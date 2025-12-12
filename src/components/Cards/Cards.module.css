@@ -1,0 +1,6 @@
+.imageCards {
+    object-fit: cover;
+    border-radius: 3rem;
+    padding: 2rem;
+    opacity: 0.4;
+}
