@@ -1,6 +1,9 @@
 "use client"
 import ServicesCards from "../Cards/ServicesCard";
 import { motion } from "framer-motion";
+import { Variants, Transition } from "framer-motion";
+
+const cardTransition: Transition = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.9] };
 
 const containerVariants = {
   hidden: {},
@@ -11,14 +14,14 @@ const containerVariants = {
   },
 };
 
-const cardVariant = {
+const cardVariant: Variants = {
   hidden: { opacity: 0, y: 80 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: ["easeOut"] } },
+  visible: { opacity: 1, y: 0, transition: cardTransition },
 };
 
-const listVariant = {
+const listVariant: Variants = {
   hidden: { opacity: 0, x: 120 },
-  visible: { opacity: 1, x: 0, transition: { duration: 2, ease: ["easeOut"] } },
+  visible: { opacity: 1, x: 0, transition: { duration: 2, ease: "easeInOut" } },
 };
 
 const itemVariant = {
