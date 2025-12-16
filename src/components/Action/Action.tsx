@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 const Action = () => {
   return (
     <section className="w-full h-auto">
-      <div className="max-w-7xl mx-auto pt-30 ">
+      <div className="max-w-7xl mx-auto my-auto pt-40 ">
         <div className="flex flex-col items-center justify-center px-30">
           <h2 className="text-4xl font-bold">
             Vamos criar algo extraordinário juntos?

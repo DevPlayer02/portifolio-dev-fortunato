@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./Hero.module.css";
 import Button from "../Button/Button";
+import profile from "@/assets/profile.jpeg";
+
 
 const textVariant = (delay: number) => ({
   hidden: { opacity: 0, x: -100 },
@@ -14,9 +16,10 @@ const textVariant = (delay: number) => ({
 });
 
 const Hero = () => {
+
   return (
     <section
-      className={`${styles.bgGrid} w-full h-screen relative overflow-hidden`}
+      className={`${styles.bgGrid} w-full h-auto relative overflow-hidden`}
     >
       <div className={`${styles.glowCircle} top-[150px] right-[-150px]`}></div>
       <div
@@ -32,7 +35,7 @@ const Hero = () => {
             width={220}
             height={220}
             className={`${styles.imageSplitShadow} absolute rounded-full border-4 border-main-light-grey/80`}
-            src="/profile.jpeg"
+            src={profile}
             alt="profile"
           />
           <div

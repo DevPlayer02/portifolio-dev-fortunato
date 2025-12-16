@@ -1,12 +1,16 @@
-"use client"
+"use client";
+
 import ServicesCards from "../Cards/ServicesCard";
-import { motion } from "framer-motion";
-import { Variants, Transition } from "framer-motion";
+import { motion, Variants, Transition } from "framer-motion";
+import Image from "next/image";
 
-const cardTransition: Transition = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.9] };
+const cardTransition: Transition = {
+  duration: 0.6,
+  ease: [0.6, 0.01, 0.05 , 0.9],
+};
 
-const containerVariants = {
-  hidden: {},
+const containerVariants: Variants = {
+  hidden: { opacity: 1, y: 20 },
   visible: {
     transition: {
       staggerChildren: 0.35,
@@ -15,21 +19,23 @@ const containerVariants = {
 };
 
 const cardVariant: Variants = {
-  hidden: { opacity: 0, y: 80 },
+  hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: cardTransition },
 };
 
 const listVariant: Variants = {
-  hidden: { opacity: 0, x: 120 },
-  visible: { opacity: 1, x: 0, transition: { duration: 2, ease: "easeInOut" } },
+  hidden: { opacity: 0, x: 60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
 };
 
-const itemVariant = {
-  hidden: { opacity: 0, x: 120 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1.5 } },
+const itemVariant: Variants = {
+  hidden: { opacity: 0, x: 60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
 };
 
 const ProvidedServices = () => {
+  console.log("ProvidedServices render");
+
   const items = [
     "Front-end moderno e UI/UX responsivo.",
     "E-commerce, CMS e Sistemas sob medida.",
@@ -40,7 +46,7 @@ const ProvidedServices = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen mt-20">
+    <section className="w-full h-auto mt-20">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -66,19 +72,19 @@ const ProvidedServices = () => {
             {items.map((text, i) => (
               <motion.li
                 key={i}
-                variants={itemVariant} 
+                variants={itemVariant}
                 className="inline-flex items-center gap-4"
               >
-                <img src="mark.svg" alt="mark-services" />
-                {text}
+                <Image src="/mark.svg" alt="mark-services" width={24} height={24} />
+                <span>{text}</span>
               </motion.li>
             ))}
           </motion.ul>
         </ServicesCards>
+        <div className="relative w-full">
+          <hr className="absolute left-1/2 -translate-x-1/2 w-screen h-0.5 bg-main-light-grey border-none mt-20" />
+        </div>
       </motion.div>
-      <div className="relative w-full">
-        <hr className="absolute left-1/2 -translate-x-1/2 w-screen h-[2px] bg-main-light-grey border-none mt-20" />
-      </div>
     </section>
   );
 };

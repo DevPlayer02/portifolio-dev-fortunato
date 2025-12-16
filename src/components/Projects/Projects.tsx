@@ -1,19 +1,20 @@
 "use client";
 import ProjectCards from "../Cards/ProjectsCards";
 import { motion } from "framer-motion";
+import dncHotel from "@/assets/dnc-hotel-next.png";
 
 const projects = [
   {
-    img: "/profile.jpeg",
-    title: "Projeto 1",
-    button: true,
-    subtitle: "Projeto feito com Next e Tailwind",
-    stacks: ["Next", "Tailwind"],
+    img: dncHotel,
+    title: "Hotel DNC",
+    linkButton: "https://dnc-hotel-front-31x01qrh6-devplayer02s-projects.vercel.app/",
+    subtitle: "Sistema de reservas de hotéis completo com autenticação, painel admin e usuário, sistema escalável, com api RESTful e banco de dados relacional.",
+    stacks: ["Next", "NestJS", "PostgreSQL", "TypeORM", "Redis", "TailwindCSS"],
   },
   {
-    img: "/profile.jpeg",
+    img: "image.png",
     title: "Projeto 2",
-    button: true,
+    button: "",
     subtitle: "Landing page com animações",
     stacks: ["HTML", "CSS", "JavaScript"],
   },
@@ -21,16 +22,16 @@ const projects = [
 
 const projectsMobile = [
   {
-    img: "/profile.jpeg",
+    img: "image.png",
     title: "Projeto 3",
-    button: true,
+    linkButton: "",
     subtitle: "Mobile First otimizado",
     stacks: ["React", "SASS"],
   },
   {
-    img: "/profile.jpeg",
+    img: "image.png",
     title: "Projeto 2",
-    button: true,
+    linkButton: "",
     subtitle: "Landing page com animações",
     stacks: ["HTML", "CSS", "JavaScript"],
   },
@@ -38,9 +39,9 @@ const projectsMobile = [
 
 const projectsSys = [
   {
-    img: "/profile.jpeg",
+    img: "image.png",
     title: "Projeto 2",
-    button: true,
+    linkButton: "",
     subtitle: "Landing page com animações",
     stacks: ["HTML", "CSS", "JavaScript"],
   },

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-no-comment-textnodes */
-import ToggleButton from "../ToggleButton/ToggleButton";
+// import ToggleButton from "../ToggleButton/ToggleButton";
 
 const Header = () => {
   return (
@@ -12,9 +12,9 @@ const Header = () => {
         </div>
         <nav className="grow flex justify-center">
           <ul className="flex items-center gap-10 font-semibold text-lg text-primary/80">
-            <a href=""><li className="hover:text-primary transition-colors">Sobre</li></a>
-            <a href=""><li className="hover:text-primary transition-colors">Projetos</li></a>
-            <a href=""><li className="hover:text-primary transition-colors">Stack</li></a>
+            <li className="hover:text-primary transition-colors">Sobre</li>
+            <li className="hover:text-primary transition-colors">Projetos</li>
+            <li className="hover:text-primary transition-colors">Stack</li>
           </ul>
         </nav>
         {/* <div className="flex items-center">
